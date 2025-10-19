@@ -8,12 +8,12 @@ html,body{
     line-height: 1.5;
     height: 100vh;
 }
-span,p{
+span,p,.nav-items>div,.nav-items2>div{
     font-family: "Open Sans", sans-serif;
 }
 .header{
     width: 100%;
-    height: 100%;
+    height: 103vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -26,6 +26,7 @@ span,p{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -1;
 }
 .nav{
     position: absolute;
@@ -36,6 +37,10 @@ span,p{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.nav-shift{
+    display: flex;
+    justify-content: space-between;
 }
 .logo>h2{
     display: inline-block;
@@ -48,26 +53,51 @@ span,p{
 }
 .nav-items{
     padding: 8px;
-    text-align: end;
+    text-align: center;
+    display: flex;
+    margin-right: 80px;
 }
-.nav-items>span{
+.nav-items>div,.nav-items2>div{
     font-size: 1rem;
     padding: 5px 20px;
     font-weight: 300;
+    transition: all 0.5s ease;
+    text-align: center;
 }
-.icons{
+.nav-items>div:hover,.icons>i:hover{
+    cursor: pointer;
+    color: #ffbe33;
+}
+.icons,.icons2{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.icons>i{
+.icons>i,.icons2>i{
     padding: 5px;
+    transition: all 0.5s ease;
 }
 .order{
     margin: 0px 10px;
     padding: 8px 30px;
     background-color: #ffbe33;
     border-radius: 30px;
+}
+.order:hover{
+    background-color: #99721e;
+}
+.nav>label>i,.nav>input{
+    font-size: 2.5rem;
+    display: none;
+}
+.ham-content{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 90%;
+    position: absolute;
+    transform: translateY(-180px);
+    display: none;
 }
 .main{
     position: absolute;
@@ -103,7 +133,7 @@ span,p{
     height: 100%;
     padding:45px 0px 75px;
     margin-top: 40px;
-    transform: translateX(800px) translateY(0px);
+    transform: translateX(150%) translateY(0px);
 }
 .info2>h1{
     top: 0;
@@ -121,6 +151,10 @@ span,p{
     background-color: #ffbe33;
     border-radius: 30px;
     display: inline-block;
+}
+.now:hover{
+    cursor: pointer;
+    background-color: #d8a22d;
 }
 .dotted{
     width: 100%;
@@ -220,7 +254,10 @@ span,p{
     background-color: #ffbe33;
     border-radius: 30px;
 }
-
+.now2:hover{
+    cursor: pointer;
+    background-color: #d8a22d;
+}
 /* menu */
 .menu{
     width: 100%;
@@ -295,7 +332,10 @@ span,p{
 .item-info>h1{
     display: inline-block;
     font-family: "Open Sans", sans-serif;
-    font-size:x-large
+    font-size:1.3em;
+}
+.item-info>p{
+    font-size: 15px;
 }
 .buy{
     width: 100%;
@@ -314,13 +354,20 @@ span,p{
     justify-content: center;
     align-items: center;
 }
+.buy>i:hover{
+    cursor: pointer;
+    background-color: #d8a22d;
+}
 .view{
-    position: absolute;
-    bottom: 0;
+    margin-top: 2em;
     color: white;
     background-color: #ffbe33;
     padding: 8px 40px;
     border-radius: 30px;
+}
+.view:hover{
+    cursor: pointer;
+    background-color: #d8a22d;
 }
 
 /* about-ctr -------------------------------------------*/
@@ -348,20 +395,28 @@ span,p{
 }
 .about-ctr>.info{
     width: 50%;
-    height: 50%;
+    height: 100%;
     text-align:left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .about-ctr>.info>h1{
     display: inline-block;
     font-size: 2.5rem;
 }
 .info>.read{
+    width: 30%;
     margin-top: 2em;
     display: inline-block;
     color: white;
     background-color: #ffbe33;
     padding: 10px 40px;
     border-radius: 30px;
+}
+.read:hover{
+    cursor: pointer;
+    background-color: #d8a22d;
 }
 /* contact----------------------------------------------- */
 .contact{
@@ -429,6 +484,10 @@ span,p{
     background-color: #ffbe33;
     border-radius: 30px;
     display: inline-block;
+}
+.book:hover{
+    cursor: pointer;
+    background-color: #d8a22d;
 }
 .align{
     width: 80%;
@@ -527,6 +586,9 @@ span,p{
     justify-content: center;
     align-items: center;
 }
+.cust-buttons>span:hover{
+    cursor: pointer;
+}
 /* footer */
 .footer{
     width: 100%;
@@ -560,6 +622,10 @@ span,p{
 }
 .footer2>.icons>i{
     font-size: larger;
+    transition: all 0.5s ease;
+}
+.footer2>.icons>i:hover{
+    color: #ffbe33;
 }
 .footer>p{
     margin-top: 30px;
@@ -574,7 +640,7 @@ span,p{
         transform: translateX(0px);
     }
     100%{
-        transform: translateX(-1370px);
+        transform: translateX(-118%);
     }
 }
 @keyframes dott1 {
@@ -638,7 +704,9 @@ span,p{
     }
 }
 
-@media screen and (max-width:1076px) and (min-width:992px){
+
+/* queries-------------------------------------------------- */
+@media screen and (min-width:994px) and (max-width:1076px) {
     .items,.nav,.main,.offers>.width,.width-div,.align{
         width: 90%;
     }
@@ -647,5 +715,130 @@ span,p{
     }
     .footer{
         height: 80vh;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:993px) {
+    .items,.nav,.main,.offers>.width,.width-div,.align{
+        width: 95%;
+    }
+    .header{
+        height: 130vh;
+    }
+    .offers,.menu{
+        height: auto;
+    }
+    .offer1,.offer2{
+        flex-direction: column;
+        align-items: center;
+    }
+    .img-box,.detail-box{
+        text-align: center;
+        height: 50%;
+    }
+    .items{
+        justify-content: left;
+    }
+    .items>.item{
+        width: 45%;
+    }
+    .about-ctr{
+        padding: 20px;
+    }
+    .people{
+        width: 95%;
+    }
+    .footer{
+        height: 80vh;
+    }
+}
+@media screen and (max-width:991px) {
+    .nav-items,.icons{
+        display: none;
+    }
+    .nav>label>i{
+        display: inline-block;
+        margin-right: 50px;
+    }
+    #ham:checked>.ham-content{
+        display: flex;
+    }
+}
+
+@media screen and (max-width:760px) {
+    .main{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    .info>h1,.info2>h1{
+        font-size: 32px;
+    }
+    .offers,.menu{
+        height: auto;
+    }
+    .offer1,.offer2{
+        width: 90%;
+        margin: 10px;
+    }
+    .items{
+        justify-content: center;
+    }
+    .items>.item{
+        width: 40%;
+        height: 420px;
+    }
+    .about-ctr{
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .about-ctr>.info{
+        width: 100%;
+        height: 100%;
+    }
+    .about-ctr>.image{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .contact{
+        height: 800px;
+    }
+    .con-dets{
+        display: flex;
+        flex-direction: column;
+    }
+    .dets,.maps{
+        width: 100%;
+    }
+    .customer,.customer2{
+        height: 400px;
+    }
+    .footer{
+        height: auto;
+    }
+}
+@media screen and (max-width:574px) {
+    .header{
+        height: 145vh;
+    }
+    .offer1,.offer2{
+        width: 100%;
+    }
+    .items>.item{
+        width: 100%;
+    }
+    .customer,.customer2{
+        height: 460px;
+    }
+    .customer2{
+        transform: translateX(1350px) translateY(-480px);
+    }
+    .foot-dets{
+        display: flex;
+        flex-direction: column;
+    }
+    .info2{
+        transform: translateX(175%);
     }
 }
