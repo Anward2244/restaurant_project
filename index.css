@@ -393,7 +393,7 @@ span,p,.nav-items>div,.nav-items2>div{
     width: 70%;
     object-fit: cover;
 }
-.about-ctr>.info{
+.about-ctr>.info3{
     width: 50%;
     height: 100%;
     text-align:left;
@@ -401,11 +401,11 @@ span,p,.nav-items>div,.nav-items2>div{
     flex-direction: column;
     justify-content: center;
 }
-.about-ctr>.info>h1{
+.about-ctr>.info3>h1{
     display: inline-block;
     font-size: 2.5rem;
 }
-.info>.read{
+.info3>.read{
     width: 30%;
     margin-top: 2em;
     display: inline-block;
@@ -767,9 +767,12 @@ span,p,.nav-items>div,.nav-items2>div{
 
 @media screen and (max-width:760px) {
     .main{
-        width: 80%;
+        width: 160%;
         display: flex;
         justify-content: center;
+    }
+    .info,.info2{
+        transform: translateX(50%);
     }
     .info>h1,.info2>h1{
         font-size: 32px;
@@ -793,7 +796,7 @@ span,p,.nav-items>div,.nav-items2>div{
         display: flex;
         flex-direction: column-reverse;
     }
-    .about-ctr>.info{
+    .about-ctr>.info3{
         width: 100%;
         height: 100%;
     }
@@ -820,25 +823,53 @@ span,p,.nav-items>div,.nav-items2>div{
 }
 @media screen and (max-width:574px) {
     .header{
-        height: 145vh;
+        height: 100vh;
+    }
+    .offers>.width{
+        width: 90%;
     }
     .offer1,.offer2{
         width: 100%;
+        height: auto;
+    }
+    .menu-buttons{
+        width: 90%;
+        height: auto;
+    }
+    .menu-buttons>span{
+        padding: 7px;
     }
     .items>.item{
         width: 100%;
     }
+    .info3>.read{
+        width: 50%;
+    }
+    .about-ctr>.image{
+        margin-top: 20px;
+        width: 100%;
+    }
+    .image>img{
+        width: 100%;
+    }
+    .width-div{
+        width: 90%;
+    }
+    .people{
+        height: 800px;
+    }
     .customer,.customer2{
-        height: 460px;
+        width: 100%;
+        height: 380px;
     }
     .customer2{
-        transform: translateX(1350px) translateY(-480px);
+        transform: translateX(1350px) translateY(-800px);
     }
     .foot-dets{
         display: flex;
         flex-direction: column;
     }
     .info2{
-        transform: translateX(175%);
+        transform: translateX(210%);
     }
 }
