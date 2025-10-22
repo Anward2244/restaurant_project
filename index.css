@@ -826,7 +826,7 @@ span,p,.nav-items>div,.nav-items2>div{
         height: 100vh;
     }
     .offers>.width{
-        width: 90%;
+        width: 100%;
     }
     .offer1,.offer2{
         width: 100%;
@@ -844,6 +844,9 @@ span,p,.nav-items>div,.nav-items2>div{
     }
     .info3>.read{
         width: 50%;
+    }
+    .about-ctr>.info3{
+        width: 160%;
     }
     .about-ctr>.image{
         margin-top: 20px;
