@@ -823,8 +823,14 @@ span,p,.nav-items>div,.nav-items2>div{
     .dets,.maps{
         width: 100%;
     }
+    .people{
+        width: 90%;
+    }
     .customer,.customer2{
-        height: 400px;
+        height: 420px;
+    }
+    .customer2{
+    transform: translateX(1350px) translateY(-420px);
     }
     .footer{
         height: auto;
