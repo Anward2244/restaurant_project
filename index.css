@@ -793,11 +793,12 @@ span,p,.nav-items>div,.nav-items2>div{
         margin: 10px;
     }
     .items{
+        width: 90%;
         justify-content: center;
     }
     .items>.item{
-        width: 40%;
-        height: 420px;
+        width: 42%;
+        height: 425px;
     }
     .about-ctr{
         height: auto;
