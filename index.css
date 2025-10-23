@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 html,body{
+    scroll-behavior: smooth;
     font-family: 'Dancing Script', cursive;
     line-height: 1.5;
     height: 100vh;
@@ -32,8 +33,7 @@ span,p,.nav-items>div,.nav-items2>div{
     position: absolute;
     width: 80%;
     height: 50px;
-    top: 0;
-    margin-top: 20px;
+    top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,7 +45,7 @@ span,p,.nav-items>div,.nav-items2>div{
 .logo>h2{
     display: inline-block;
     padding: 8px 40px;
-    font-size: 32px;
+    font-size: 2.5em;
     margin-right: 120px;
 }
 .nav>.logo>h2:hover{
@@ -57,14 +57,18 @@ span,p,.nav-items>div,.nav-items2>div{
     display: flex;
     margin-right: 80px;
 }
-.nav-items>div,.nav-items2>div{
+.nav-items>div>a{
+    text-decoration: none;
+    color: white;
+}
+.nav-items>div>a,.nav-items2>div>a{
     font-size: 1rem;
     padding: 5px 20px;
     font-weight: 300;
     transition: all 0.5s ease;
     text-align: center;
 }
-.nav-items>div:hover,.icons>i:hover{
+.nav-items>div>a:hover,.icons>i:hover{
     cursor: pointer;
     color: #ffbe33;
 }
@@ -83,7 +87,8 @@ span,p,.nav-items>div,.nav-items2>div{
     background-color: #ffbe33;
     border-radius: 30px;
 }
-.order:hover{
+.icons>.order:hover{
+    cursor: pointer;
     background-color: #99721e;
 }
 .nav>label>i,.nav>input{
@@ -99,6 +104,12 @@ span,p,.nav-items>div,.nav-items2>div{
     transform: translateY(-180px);
     display: none;
 }
+.nav>label>i:hover{
+    cursor: pointer;
+}
+#ham:hover ~.ham-content{
+    display: flex;
+}
 .main{
     position: absolute;
     color: white;
@@ -111,6 +122,7 @@ span,p,.nav-items>div,.nav-items2>div{
     animation-timing-function:ease;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+    z-index: -1;
 }
 .info{
     width: 50%;
@@ -118,13 +130,13 @@ span,p,.nav-items>div,.nav-items2>div{
     padding:45px 0px 75px;
     margin-top: 40px;
 }
-.info>h1{
+.info>h1,.info2>h1{
     top: 0;
-    font-size: 56px;
+    font-size: 4em;
     display: inline-block;
     margin-bottom: 15px;
 }
-.info>p{
+.info>p,.info2>p{
     font-size: 14px;
 }
 
@@ -134,15 +146,6 @@ span,p,.nav-items>div,.nav-items2>div{
     padding:45px 0px 75px;
     margin-top: 40px;
     transform: translateX(150%) translateY(0px);
-}
-.info2>h1{
-    top: 0;
-    font-size: 56px;
-    display: inline-block;
-    margin-bottom: 15px;
-}
-.info2>p{
-    font-size: 14px;
 }
 
 .now{
@@ -242,7 +245,7 @@ span,p,.nav-items>div,.nav-items2>div{
 .detail-box>p{
     display: inline-block;
     font-family: 'Dancing Script', cursive;
-    font-size: 24px;
+    font-size: 1.5em;
 }
 .detail-box>span{
     font-family: 'Dancing Script', cursive;
@@ -316,6 +319,7 @@ span,p,.nav-items>div,.nav-items2>div{
     align-items: center;
     border-radius: 10px 10px 0px 45px;
     margin-top: -1px;
+    overflow: hidden;
 }
 .img>img{
     width: 50%;
@@ -335,7 +339,7 @@ span,p,.nav-items>div,.nav-items2>div{
     font-size:1.3em;
 }
 .item-info>p{
-    font-size: 15px;
+    font-size: 1em;
 }
 .buy{
     width: 100%;
@@ -381,6 +385,7 @@ span,p,.nav-items>div,.nav-items2>div{
     align-items: center;
     color: white;
     justify-content: center;
+    overflow: hidden;
 }
 .about-ctr>.image{
     width: 50%;
@@ -453,7 +458,7 @@ span,p,.nav-items>div,.nav-items2>div{
     margin-bottom: 25px;
     font-size: 16px;
     font-family:"Open Sans", sans-serif;
-    color: #222831;
+    color: black;
     border: 1px solid #999;
     border-radius: 5px;
 }
@@ -464,7 +469,7 @@ span,p,.nav-items>div,.nav-items2>div{
     margin-bottom: 25px;
     font-size: 16px;
     font-family:"Open Sans", sans-serif;
-    color: #222831;
+    color: black;
     border: 1px solid #999;
     border-radius: 5px;
  }
@@ -771,8 +776,11 @@ span,p,.nav-items>div,.nav-items2>div{
         display: flex;
         justify-content: center;
     }
-    .info,.info2{
+    .info{
         transform: translateX(50%);
+    }
+    .info2{
+        transform: translateX(200%);
     }
     .info>h1,.info2>h1{
         font-size: 32px;
