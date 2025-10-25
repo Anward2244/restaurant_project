@@ -283,13 +283,20 @@ span,p,.nav-items>div,.nav-items2>div{
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
+    gap: 10px;
 }
 .menu-buttons>span{
     padding: 7px 25px;
+    border-radius: 25px;
 }
 #all-btn{
     background-color: #222831;
     border-radius: 25px;
+    color: white;
+}
+.menu-buttons>span:hover{
+    cursor: pointer;
+    background-color: #222831;
     color: white;
 }
 
@@ -627,7 +634,7 @@ span,p,.nav-items>div,.nav-items2>div{
     justify-content: center;
 }
 .footer2>.icons>i{
-    font-size: larger;
+    font-size: x-large;
     transition: all 0.5s ease;
 }
 .footer2>.icons>i:hover{
